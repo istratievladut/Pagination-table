@@ -1,0 +1,73 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.table {
+  text-align: start;
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  padding: 25px;
+
+  &-column {
+    flex: 1;
+    border: 1px solid $border-color;
+    padding: 5px;
+
+    &-row {
+      padding: 5px 10px;
+      display: flex;
+      gap: 10px;
+      border-bottom: 1px solid $border-bottom-color;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $hover-color;
+      }
+
+      &-checkbox {
+        accent-color: $checkbox-color;
+        width: 17px;
+        height: 17px;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        &:checked:after {
+          background-color: $hover-color;
+        }
+      }
+    }
+  }
+
+  &-pagination {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid $border-color;
+    align-items: center;
+    justify-content: center;
+
+    &-button {
+      border: none;
+      padding: 10px;
+      border-radius: 20px;
+      width: 35px;
+      height: 35px;
+
+      &:disabled:hover {
+        cursor: not-allowed;
+      }
+
+      &:enabled:hover {
+        cursor: pointer;
+        background-color: $pagination-button-hover;
+      }
+    }
+  }
+}
